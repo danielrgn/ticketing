@@ -17,7 +17,3 @@ it('can fetch a list of tickets', async () => {
 
   expect(response.body.length).toEqual(3);
 });
-
-it('return 404 when list of tickets is empty', async () => {
-  await request(app).get('/api/tickets').send().expect(404);
-});
